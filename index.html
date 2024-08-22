@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+		<!--
+		
+		This file illustrates the SVG game. It represents the instructions of the 
+		game and few buttons to start ,stop and quit the game.It also represents 
+		one input field to change the color of the object. 
+		
+		-->
+
+	<head>
+	
+		<!-- Author: Nisarg Nayak -->
+		
+		<title>SVG game</title>
+		
+		<meta charset ="UTF-8">
+		<link rel="stylesheet" href="mystyles.css">
+		<script src="myjavascript.js"></script>
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
+		
+	</head>
+
+	<body>
+	
+		<header>
+			<h1>Let's Play</h1>
+		</header>
+		
+		<div class="gridcontainer">
+		
+			<div class="svgcontainer">
+			<svg id="svg" width="600" height="600" stroke="black">
+			
+						
+			</svg>
+			
+			</div>	<!-- svg container ends-->
+			
+			<div class="controllers">
+				
+				<p class="instruction"><strong>Instructions:-</strong></p>
+				
+				<ol>
+				
+					<li>Click on the "Start" button to play a game.</li>
+					
+					<li>Once you start a game you would have 30 seconds to play.Once
+					time is out,you will be shown your final score as well.click on the "Start" button to restart the game.</li>
+					
+					<li>You are supposed to jump when circle object comes towards rectangle.<br>
+					To avoid the collision, click on the rectangle to get it jumped. </li>
+					
+					<li>Once the objects collide,your score and time are reset to it's initial stage.
+					click on the "Start" button to restart the game.</li>
+					
+					<li>During play time,if you want to pause the game then click on the "Stop" button.</li>
+					
+					<li>After stopping ,if you start a game by clicking on Start button, be mindful
+					that circle will start running from the last place before you pressed "Stop" button.</li>
+					
+					<li>Refresh the page to restart the entire game.</li>
+					
+					<li>You can change the color of the running object by inputting the color in the input field</li>
+					
+				</ol>
+				
+			
+				<button id="start" class="buttons" onclick="startGame()">Start</button>
+				<button id="stop" class="buttons" onclick="stopGame()">Stop</button>
+				<button id="quit" class="buttons" onclick="totalExit()">Quit</button><br><br>
+				
+				<p class="scoring">Score: <span id="scoring"></span></p><br><br>
+				<label>Change the color of the running object (Do not input rgb color code)</label><br>
+				
+				<input type="text" id="setcolor" value="grey"><br>
+			
+			</div>	<!-- controllers ends -->
+			
+		</div>	<!-- grid container ends-->
+		
+		<footer>
+			&copy;2023, Nisarg Nayak, Mohawk College
+		</footer>
+		
+	</body>
+		
+	
+</html>

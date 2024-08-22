@@ -1,0 +1,301 @@
+/**
+		
+		This file illustrates the styles for the page "index.html" and 
+		it also represents the responsive design for the different devices.
+		
+		@Author: Nisarg Nayak
+		
+	**/
+
+body{
+	background-image: url("images/R.jfif");
+}
+.gridcontainer{
+	display:grid;
+	grid-template-columns: 50% 50%; 
+}
+.svgcontainer{
+	grid-column:1;
+	grid-row:1;
+}
+.controllers{
+	grid-column:2;
+	grid-row:1;
+}
+svg{
+	display:block;
+	margin:auto;
+}
+.buttons{
+
+	margin:auto;
+	display:inline;
+	justify-content:center;
+	background-color:red;
+	font-family: sans-serif;
+	font-size:2.0em;
+	font-weight:bold;
+	border:5px solid black;
+	border-radius:30px;
+}
+
+.buttons:hover{
+	background-color:yellow;
+}
+#score{
+	text-align:center;
+	color:white;
+	background-color:yellow;
+}
+#stop:hover{
+	background-color:orange;
+}
+ol{
+	color:white;
+	background-color:grey;
+	width:75%;
+	font-family:Times new Roman;
+	font-size:1em;
+	margin-bottom:40px;
+	}
+
+@keyframes blinking {
+	0% {
+		color: violet;
+	}
+	25% {
+		color: red;
+	}
+	50% {
+		color: violet;
+	}
+	75% {
+		color: red;
+	}
+	100% {
+		color:black;
+	}	
+}
+.instruction{
+	color:blue;
+	font-family:sans-serif;
+	font-size:2em;
+	width:30%;
+	animation: blinking 3s infinite;
+}
+p.scoring{		
+	font-size:2.5em;
+	color:yellow;
+	filter:brightness(150%);
+	display:inline;
+	text-align:center;
+	margin-bottom:20px;
+	background-color:black;
+}
+label{
+	color:white;
+	font-weight:bold;
+}
+#setcolor{
+	border:3px solid black;
+	background-color:orange;
+	width:250px;
+	color:#000000;
+	font-weight:bold;
+	font-size:1em;
+}
+footer{
+	text-align:center;
+	color:white;
+	background-color:grey;
+	margin-top: 100px;
+}
+header{
+	color: #00FFFF;
+	text-align:center;
+	font-size:1.5em;
+}
+
+@media (max-width: 1200px){
+	.svgcontainer{
+        grid-column: 1;
+		grid-row:2;
+        height: 100%; 
+        padding-left: 50px;
+		padding-top: 50px;
+	}
+	.controllers{
+		grid-column: 1;
+		grid-row: 1;
+	}
+    .buttons {
+        font-size: 1.2em; 
+        border-radius: 10px; 	
+    }
+
+    p.scoring {
+        font-size: 1.5em; 
+    }
+
+    .instruction {
+        width:60%;
+    }
+	ol{
+		color:lightblue;
+		background-color:black;
+		justify-content:center;
+		width:190%;
+	}
+	header h1{
+		margin-left:20px;
+	}
+	footer{
+		width:1200px;
+	}
+}
+@media (max-width: 1024px){
+	.svgcontainer{
+        grid-column: 1;
+		grid-row:2;
+        height: 100%;
+        padding-left: 50px;
+		padding-top: 50px;
+	}
+	.controllers{
+		grid-column: 1;
+		grid-row: 1;
+	}
+    .buttons {
+        font-size: 1.2em; 
+        border-radius: 10px; 	
+    }
+
+    p.scoring {
+        font-size: 1.5em; 
+    }
+    .instruction {
+        width:60%;
+    }
+	ol{
+		color:lightblue;
+		background-color:black;
+		justify-content:center;
+		width:190%;
+	}
+	header h1{
+		margin-left:20px;
+	}
+	footer{
+		width:1000px;
+		margin-top: 200px;
+	}
+}
+
+@media (max-width: 768px) {
+    .svgcontainer{
+        grid-column: 1;
+		grid-row:2;
+        height: 100%; 
+        padding-left: 90px;
+		padding-top: 50px;
+	}
+	.controllers{
+		grid-column: 1;
+		grid-row: 1;
+	}
+    .buttons {
+        font-size: 1.2em; 
+        border-radius: 10px; 	
+    }
+
+    p.scoring {
+        font-size: 1.5em; 
+    }
+
+    .instruction {
+        width:80%;
+    }
+	ol{
+		color:lightblue;
+		background-color:black;
+		justify-content:center;
+		width:200%;
+
+	}
+	header h1{
+		margin-left:100px;
+		width:100%;
+	}
+	footer{
+		width:800px;
+	}
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.3em;
+		width:750px;
+    }
+
+    .buttons {
+        font-size: 1.5em;
+    }
+
+    #setcolor {
+        font-size: 1.5em;
+        width: 100%;
+	    }
+    ol {
+        font-size: 1.5em;
+		justify-content: center;
+		width:400%;
+    }
+
+    .instruction {
+        font-size: 1em; 
+    }
+	label{
+		font-size: 1.5em;
+	}
+	footer{
+		margin-top:500px;
+		width: 900px;
+	}
+}
+@media (max-width: 320px){
+	header{
+		font-size:1em;
+		width:1100px;
+	}
+	h1{
+		text-align:center;
+	}
+	.svgcontainer{
+		grid-column:1;
+		grid-row:2;
+	}
+	.controllers{
+		grid-column:1 /span 2;
+		grid-row:1;
+	}
+	ol{
+		color:lightblue;
+		background-color:black;
+		justify-content:center;
+		width:250%;
+	}
+	svg{
+		display:block;
+		margin-left:160px;
+		margin-top:20px;
+	}
+	.display{
+		margin-left:200px;
+	}
+	.instruction{
+		width:70%;
+	}
+	footer{
+		width:1100px;
+	}
+}
